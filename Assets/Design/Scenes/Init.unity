@@ -257,7 +257,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4bf37f4c5b18c0646b5659de89a24585, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SwerveSpeed: 1
   FirstTouchPosition: {x: 0, y: 0, z: 0}
   LastTouchPosition: {x: 0, y: 0, z: 0}
 --- !u!1 &1516990555
@@ -360,7 +359,7 @@ MonoBehaviour:
   Levels:
   - LevelType: 0
     LevelID: Level_1
-    BackgroundColor: {r: 1, g: 0.5987907, b: 0.39999998, a: 1}
+    BackgroundColor: {r: 0.39999998, g: 1, b: 0.64979917, a: 1}
   CurrentLevel:
     LevelType: 0
     LevelID: 
