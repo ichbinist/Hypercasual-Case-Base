@@ -199,7 +199,7 @@ MonoBehaviour:
   m_fontWeight: 400
   m_enableAutoSizing: 1
   m_fontSizeMin: 18
-  m_fontSizeMax: 900
+  m_fontSizeMax: 2000
   m_fontStyle: 1
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
@@ -265,7 +265,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1333931723977139996}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1316335682222217052
 GameObject:
@@ -290,13 +290,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1316335682222217052}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4237277604907393618}
-  m_Father: {fileID: 1333931723977139996}
+  m_Father: {fileID: 4287186381189191160}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2568284514919421215
@@ -328,6 +328,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8446975637371935471}
+  - {fileID: 5775288341624526926}
   m_Father: {fileID: 1333931723977139996}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -365,7 +366,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4287186381189191160}
-  - {fileID: 5775288341624526926}
   - {fileID: 8743926565787467972}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -378,7 +378,7 @@ MeshCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7499943682534884973}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 4
   m_Convex: 1
@@ -399,6 +399,8 @@ MonoBehaviour:
   OnObstacleDestroyed:
     m_PersistentCalls:
       m_Calls: []
+  IsInteractable: 1
+  Health: 7
 --- !u!114 &1369890823151941960
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -411,6 +413,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86db9651e933770478c37170c78006b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  HealthText: {fileID: 5308057512892633158}
 --- !u!114 &7541602000411195414
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -436,7 +439,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   RewardCount: 5
-  RewardPrefab: {fileID: 4837498354525987396, guid: bf75e477770b36048b610317f9624f26,
+  RewardPrefab: {fileID: 5164632106635517513, guid: bf75e477770b36048b610317f9624f26,
     type: 3}
   RewardPrefabHolder: {fileID: 8743926565787467972}
   RewardStartHeight: 3.75

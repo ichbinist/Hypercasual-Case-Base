@@ -10,6 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 339060460157092101}
   - component: {fileID: 7852571755543030958}
+  - component: {fileID: 5164632106635517513}
+  - component: {fileID: 4929803369463434482}
   m_Layer: 0
   m_Name: Coin
   m_TagString: Untagged
@@ -41,11 +43,38 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4837498354525987396}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.77
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &5164632106635517513
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4837498354525987396}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11150802ad25de94d96c87084dd9a7aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  RewardType: 0
+  CoinRewardAmount: 15
+  IsCollectable: 0
+--- !u!114 &4929803369463434482
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4837498354525987396}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e3e57181106c96418c8e12b095a6aff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &9152257256990414874
 GameObject:
   m_ObjectHideFlags: 0

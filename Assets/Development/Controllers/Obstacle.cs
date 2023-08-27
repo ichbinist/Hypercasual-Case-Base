@@ -1,3 +1,4 @@
+using Sirenix.OdinInspector;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,4 +8,10 @@ public class Obstacle : MonoBehaviour
 {
     [HideInInspector]
     public UnityEvent OnObstacleDestroyed = new UnityEvent();
+
+    [FoldoutGroup("Obstacle Settings")]
+    [ReadOnly]
+    public bool IsInteractable = true;
+    [FoldoutGroup("Obstacle Settings")]
+    public int Health = 1;
 }
