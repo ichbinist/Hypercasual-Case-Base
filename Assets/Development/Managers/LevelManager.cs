@@ -17,6 +17,7 @@ public class LevelManager : Singleton<LevelManager>
     [HideInInspector]
     public bool IsLevelStarted;
 
+    [Button]
     public void StartLevel()
     {
         if (IsLevelStarted) return;
@@ -24,6 +25,7 @@ public class LevelManager : Singleton<LevelManager>
         IsLevelStarted = true;
     }
 
+    [Button]
     public void FinishLevel()
     {
         if (!IsLevelStarted) return;

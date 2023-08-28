@@ -6,10 +6,6 @@ using Sirenix.OdinInspector;
 public class InputManager : Singleton<InputManager>
 {
     [FoldoutGroup("Input Manager Settings")]
-    [FoldoutGroup("Input Manager Settings/Swerve Settings")]
-    public float SwerveSpeed;
-
-    [FoldoutGroup("Input Manager Settings")]
     [FoldoutGroup("Input Manager Settings/Tap Debug")]
     [ReadOnly]
     public Vector3 FirstTouchPosition;
@@ -19,7 +15,7 @@ public class InputManager : Singleton<InputManager>
     [ReadOnly]
     public Vector3 LastTouchPosition;
 
-    private void FixedUpdate()
+    private void Update()
     {
         SetTouchPositions();
     }
@@ -27,34 +23,30 @@ public class InputManager : Singleton<InputManager>
     #region Tap
     private void SetTouchPositions()
     {
-        if (Input.touchCount == 1)
+        if (Input.GetMouseButtonDown(0))
         {
-            Touch touch = Input.GetTouch(0);
-            if (touch.phase == TouchPhase.Began)
-            {
-                FirstTouchPosition = touch.position;
-                LastTouchPosition = touch.position;
-            }
-            else if (touch.phase == TouchPhase.Moved)
-            {
-                LastTouchPosition = touch.position;
-            }
-            else if (touch.phase == TouchPhase.Ended)
-            {
-                LastTouchPosition = touch.position;
-            }
+            FirstTouchPosition = Input.mousePosition;
+            LastTouchPosition = Input.mousePosition;
         }
+        else if (Input.GetMouseButton(0))
+        {
+            LastTouchPosition = Input.mousePosition;
+        }
+        else if (Input.GetMouseButtonUp(0))
+        {
+            LastTouchPosition = Input.mousePosition;
+        }    
     }
     #endregion
 
     #region Swerve
-    public Vector2 GetSwerveAmount()
+    public Vector2 GetSwerveAmount(float swerveSpeed)
     {
         Vector2 ScreenSwerveAmount = Input.mousePosition - InputManager.Instance.FirstTouchPosition;
 
         Vector2 UnclampedWorldSwerveAmount = ScreenSwerveAmount / Screen.width;
 
-        Vector2 ClampedSwerveAmount = new Vector2(UnclampedWorldSwerveAmount.x * SwerveSpeed, 0f);
+        Vector2 ClampedSwerveAmount = new Vector2(UnclampedWorldSwerveAmount.x * swerveSpeed, 0f);
 
         return ClampedSwerveAmount;
     }
